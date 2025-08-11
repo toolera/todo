@@ -19,7 +19,7 @@ export default function Home() {
     const savedTodos = localStorage.getItem('todos');
     if (savedTodos) {
       const parsedTodos = JSON.parse(savedTodos);
-      setTodos(parsedTodos.map((todo: any) => ({
+      setTodos(parsedTodos.map((todo: Todo & { createdAt: string }) => ({
         ...todo,
         createdAt: new Date(todo.createdAt)
       })));

@@ -20,7 +20,6 @@ export const metadata: Metadata = {
   authors: [{ name: "Todo App" }],
   creator: "Todo App",
   publisher: "Todo App",
-  viewport: "width=device-width, initial-scale=1",
   robots: "index, follow",
   openGraph: {
     type: "website",
@@ -35,6 +34,11 @@ export const metadata: Metadata = {
     description: "A clean, responsive todo app to help you stay organized and productive. No registration required - all data saved locally on your device.",
   },
   manifest: "/manifest.json",
+};
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({
