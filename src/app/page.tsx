@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Trash2, Plus, Check, X } from 'lucide-react';
+import { Trash2, Plus, Check } from 'lucide-react';
 
 interface Todo {
   id: string;
@@ -85,7 +85,7 @@ export default function Home() {
                 type="text"
                 value={newTodo}
                 onChange={(e) => setNewTodo(e.target.value)}
-                onKeyPress={(e) => e.key === 'Enter' && addTodo()}
+                onKeyDown={(e) => e.key === 'Enter' && addTodo()}
                 placeholder="Add a new task..."
                 className="flex-1 px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-700"
               />
