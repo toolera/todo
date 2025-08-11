@@ -44,6 +44,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <StructuredData />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/icon.svg" />
+        <meta name="theme-color" content="#3b82f6" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
